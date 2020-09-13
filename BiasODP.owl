@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.ontologydesignpatterns.org/bias/">
-    <Prefix name="" IRI="http://www.ontologydesignpatterns.org/biasODP/"/>
+    <Prefix name="" IRI="http://www.ontologydesignpatterns.org/bias/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -32,13 +32,13 @@
         <ObjectProperty IRI="hasBiasSourceCharacteristic"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#affectedBy"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasBias"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasBiasCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#recieved"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Bias"/>
@@ -54,7 +54,7 @@
     <SubClassOf>
         <Class IRI="#BiasRecipient"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#recieved"/>
+            <ObjectProperty IRI="#affectedBy"/>
             <Class IRI="#Bias"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -84,29 +84,33 @@
         <ObjectProperty IRI="hasBiasSourceCharacteristic"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#affectedBy"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
         <ObjectProperty IRI="#hasBias"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#hasBiasCharacteristic"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="#recieved"/>
     </AsymmetricObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="hasBiasSourceCharacteristic"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#affectedBy"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#hasBias"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#hasBiasCharacteristic"/>
-    </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#recieved"/>
     </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasBiasSourceCharacteristic"/>
         <Class IRI="#BiasSource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affectedBy"/>
+        <Class IRI="#BiasRecipient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBias"/>
@@ -116,13 +120,13 @@
         <ObjectProperty IRI="#hasBiasCharacteristic"/>
         <Class IRI="#Bias"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#recieved"/>
-        <Class IRI="#BiasRecipient"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasBiasSourceCharacteristic"/>
         <Class IRI="BiasSourceCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affectedBy"/>
+        <Class IRI="#Bias"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBias"/>
@@ -131,10 +135,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBiasCharacteristic"/>
         <Class IRI="#BiasCharacteristic"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#recieved"/>
-        <Class IRI="#Bias"/>
     </ObjectPropertyRange>
     <DisjointObjectProperties>
         <ObjectProperty IRI="hasBiasSourceCharacteristic"/>
