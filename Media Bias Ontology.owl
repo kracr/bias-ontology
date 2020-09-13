@@ -1,0 +1,647 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.iiitd.ac.in/MediaBiasOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.iiitd.ac.in/MediaBiasOntology">
+    <Prefix name="" IRI="http://www.iiitd.ac.in/amrit/capstone-project/ontologies/2020/MediaBiasOntology"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.ontologydesignpatterns.org/bias/</Import>
+    <Declaration>
+        <Class IRI="#AdvertisementBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AdvertismentBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audience"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConcisionBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConcisionBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CorporateBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CorporateBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoverageBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoverageBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Journalist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MainstreamBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MainstreamBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediaBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewsArticle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewsAudio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewsImage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewsOutlet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewsVideo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PoliticalBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PoliticalBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StatementBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StatementBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#createdBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAdvertisementBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConcisionBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCorporateBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoverageBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMainstreamBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPoliticalBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStatementBiasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#publishedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCountOfNegativeWords"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDuration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFactCoveredRatio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLengthRatio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNegativeWordRatio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumberOfCorporateEntityMention"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumberOfPoliticalEntityMentions"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumerOfAdvertiserMention"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSimilarityMeasure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdCountOfNegativeWord"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdDimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdDuration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdFactCoveredRatio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdLengthRatio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdNegativeWordRatio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdNumberOfAdvertiserMention"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdNumberOfCorporateEntityMention"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdNumberOfPoliticalEntityMentions"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasThresholdSimilarityMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/biasODP/#Person"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AdvertisementBiasCharacteristic"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AdvertismentBias"/>
+        <Class IRI="#MediaBias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AdvertismentBias"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAdvertisementBiasCharacteristic"/>
+            <Class IRI="#AdvertisementBiasCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audience"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasRecipient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcisionBias"/>
+        <Class IRI="#MediaBias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcisionBias"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasConcisionBiasCharacteristic"/>
+            <Class IRI="#ConcisionBiasCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcisionBiasCharacteristic"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CorporateBias"/>
+        <Class IRI="#MediaBias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CorporateBias"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCorporateBiasCharacteristic"/>
+            <Class IRI="#CorporateBiasCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CorporateBiasCharacteristic"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoverageBias"/>
+        <Class IRI="#MediaBias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoverageBias"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCoverageBiasCharacteristic"/>
+            <Class IRI="#CoverageBiasCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoverageBiasCharacteristic"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Journalist"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MainstreamBias"/>
+        <Class IRI="#MediaBias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MainstreamBias"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMainstreamBiasCharacteristic"/>
+            <Class IRI="#MainstreamBiasCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MainstreamBiasCharacteristic"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MediaBias"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#Bias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewsArticle"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewsAudio"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewsImage"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewsVideo"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PoliticalBias"/>
+        <Class IRI="#MediaBias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PoliticalBias"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPoliticalBiasCharacteristic"/>
+            <Class IRI="#PoliticalBiasCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PoliticalBiasCharacteristic"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StatementBias"/>
+        <Class IRI="#MediaBias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StatementBias"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStatementBiasCharacteristic"/>
+            <Class IRI="#StatementBiasCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StatementBiasCharacteristic"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#createdBy"/>
+            <Class IRI="#Journalist"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#publishedBy"/>
+            <Class IRI="#NewsOutlet"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/biasODP/#Person"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/biasODP/#Person"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole"/>
+            <Class IRI="#Journalist"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasRecipient"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAdvertisementBiasCharacteristic"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/bias/#hasBiasCharacteristic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasConcisionBiasCharacteristic"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/bias/#hasBiasCharacteristic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCorporateBiasCharacteristic"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/bias/#hasBiasCharacteristic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCoverageBiasCharacteristic"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/bias/#hasBiasCharacteristic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMainstreamBiasCharacteristic"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/bias/#hasBiasCharacteristic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPoliticalBiasCharacteristic"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/bias/#hasBiasCharacteristic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStatementBiasCharacteristic"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/bias/#hasBiasCharacteristic"/>
+    </SubObjectPropertyOf>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#createdBy"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#publishedBy"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#createdBy"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#publishedBy"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#createdBy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAdvertisementBiasCharacteristic"/>
+        <Class IRI="#AdvertismentBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConcisionBiasCharacteristic"/>
+        <Class IRI="#ConcisionBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCorporateBiasCharacteristic"/>
+        <Class IRI="#CorporateBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoverageBiasCharacteristic"/>
+        <Class IRI="#CoverageBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMainstreamBiasCharacteristic"/>
+        <Class IRI="#MainstreamBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPoliticalBiasCharacteristic"/>
+        <Class IRI="#PoliticalBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStatementBiasCharacteristic"/>
+        <Class IRI="#StatementBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#publishedBy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/#BiasSource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#createdBy"/>
+        <Class IRI="#Journalist"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAdvertisementBiasCharacteristic"/>
+        <Class IRI="#AdvertisementBiasCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConcisionBiasCharacteristic"/>
+        <Class IRI="#ConcisionBiasCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCorporateBiasCharacteristic"/>
+        <Class IRI="#CorporateBiasCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoverageBiasCharacteristic"/>
+        <Class IRI="#CoverageBiasCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMainstreamBiasCharacteristic"/>
+        <Class IRI="#MainstreamBiasCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPoliticalBiasCharacteristic"/>
+        <Class IRI="#PoliticalBiasCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStatementBiasCharacteristic"/>
+        <Class IRI="#StatementBiasCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#publishedBy"/>
+        <Class IRI="#NewsOutlet"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#createdBy"/>
+        <ObjectProperty IRI="#publishedBy"/>
+    </DisjointObjectProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCountOfNegativeWords"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/BiasSourceCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDimension"/>
+        <Class IRI="#NewsImage"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDuration"/>
+        <ObjectUnionOf>
+            <Class IRI="#NewsAudio"/>
+            <Class IRI="#NewsVideo"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFactCoveredRatio"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/BiasSourceCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLength"/>
+        <Class IRI="#NewsArticle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLengthRatio"/>
+        <Class IRI="#NewsArticle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNegativeWordRatio"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/BiasSourceCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNumberOfCorporateEntityMention"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/BiasSourceCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNumberOfPoliticalEntityMentions"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/BiasSourceCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNumerOfAdvertiserMention"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/BiasSourceCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSimilarityMeasure"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/bias/BiasSourceCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdCountOfNegativeWord"/>
+        <Class IRI="#StatementBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdDimension"/>
+        <Class IRI="#ConcisionBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdDuration"/>
+        <Class IRI="#ConcisionBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdFactCoveredRatio"/>
+        <Class IRI="#CoverageBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdLength"/>
+        <Class IRI="#ConcisionBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdLengthRatio"/>
+        <Class IRI="#StatementBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdNegativeWordRatio"/>
+        <Class IRI="#StatementBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdNumberOfAdvertiserMention"/>
+        <Class IRI="#AdvertisementBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdNumberOfCorporateEntityMention"/>
+        <Class IRI="#CorporateBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdNumberOfPoliticalEntityMentions"/>
+        <Class IRI="#PoliticalBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasThresholdSimilarityMeasure"/>
+        <Class IRI="#MainstreamBiasCharacteristic"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCountOfNegativeWords"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDimension"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDuration"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFactCoveredRatio"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLength"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLengthRatio"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNegativeWordRatio"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNumberOfCorporateEntityMention"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNumberOfPoliticalEntityMentions"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNumerOfAdvertiserMention"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSimilarityMeasure"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdCountOfNegativeWord"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdDimension"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdDuration"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdFactCoveredRatio"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdLength"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdLengthRatio"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdNegativeWordRatio"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdNumberOfAdvertiserMention"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdNumberOfCorporateEntityMention"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdNumberOfPoliticalEntityMentions"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasThresholdSimilarityMeasure"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
